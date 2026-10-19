@@ -14,3 +14,13 @@ Ouvrir `site/index.html` pour tester localement.
 
 ## Sécurité
 Application sans backend, sans API tierce et sans script distant. Les informations locales ne sont pas chiffrées et peuvent être effacées par le navigateur.
+
+## Scan assisté (branche feature/assisted-discovery)
+- Lance plusieurs recherches explicites sur Google/Bing dans un nouvel onglet.
+- L'utilisateur colle volontairement des URL HTTPS de pages candidates.
+- L'application nettoie et déduplique les URL, puis propose une vérification manuelle et un ajout au suivi.
+- Les URL ne sont pas récupérées automatiquement depuis les moteurs et leur contenu n'est pas analysé.
+- L'interface offre un accès direct à https://haveibeenpwned.com/ pour vérifier les fuites connues. Aucun email n'est envoyé par Privacy Guardian à HIBP.
+- Pour l'API des recherches HIBP par email, une clé et une authentification serveur sont nécessaires ; ne jamais intégrer une clé côté navigateur.
+- Attention : recherche Google/Bing et ouverture des URL candidates communiquent la requête ou l'URL aux services externes.
+- La branche ne sera pas publiée automatiquement en production sans fusion dans main.
