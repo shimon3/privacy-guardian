@@ -29,5 +29,5 @@ Application sans backend, sans API tierce et sans script distant. Les informatio
 - Section qui permet de fixer une date d'envoi et une échéance de relance sur les fiches enregistrées.
 - Suggestion de relance à 30 jours à titre indicatif, **sans constituer un délai légal applicable**.
 - Les rappels sont visibles uniquement quand le site est ouvert ; aucun email ni notification n'est envoyé.
-- Les dates sont conservées dans la clé locale `privacy-guardian-followups-v1` et **ne figurent pas encore dans l'export JSON existant**. Ne les considérez pas comme sauvegardées par cet export.
+- Les dates sont conservées dans la clé locale `privacy-guardian-followups-v1`. Les exports JSON v2 incluent les dates. Les exports v1 restent importables ; dans ce cas les anciennes échéances sont vidées pour éviter d'afficher des dates sans correspondance.
 - Aucun service externe ni backend ajouté.
