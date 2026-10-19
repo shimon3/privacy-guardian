@@ -31,5 +31,6 @@
  render();
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)render()});
  window.addEventListener('storage',render);
+ window.addEventListener('privacy-guardian-updated',render);
  window.addEventListener('focus',render);
 })();
