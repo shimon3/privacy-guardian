@@ -1,0 +1,9 @@
+'use strict';(()=>{const root=document.getElementById('directoryList');if(!root)return;
+const entries=[
+{name:'Spokeo',region:'Principalement États-Unis',type:'Courtier / annuaire',url:'https://www.spokeo.com/optout',source:'https://www.spokeo.com/optout',instructions:'Recherchez une fiche vous concernant sur le site, puis utilisez son formulaire de retrait. Certaines données sources peuvent rester publiques.'},
+{name:'BeenVerified',region:'Principalement États-Unis',type:'Courtier / annuaire',url:'https://www.beenverified.com/svc/optout/search/optouts',source:'https://www.beenverified.com/',instructions:'Vérifiez la procédure de retrait actuelle dans les rubriques de confidentialité du site. Une validation par email peut être demandée.'},
+{name:'CNIL — droit à l’effacement',region:'France / RGPD lorsque applicable',type:'Autorité publique',url:'https://www.cnil.fr/fr/comprendre-mes-droits/le-droit-leffacement-supprimer-vos-donnees-en-ligne',source:'https://www.cnil.fr/',instructions:'Guide officiel expliquant comment contacter le responsable du traitement et conserver la preuve de la demande.'}
+];const make=(t,v)=>{const e=document.createElement(t);if(v!==undefined)e.textContent=v;return e};
+for(const entry of entries){const row=make('article');row.className='case';const section=make('div');section.style.maxWidth='650px';section.append(make('strong',entry.name));section.append(make('p',entry.type+' · '+entry.region));section.append(make('p',entry.instructions));const link=make('a','Consulter la procédure officielle ↗');link.href=entry.url;link.target='_blank';link.rel='noopener noreferrer';section.append(link);row.append(section);root.append(row)}
+const note=make('p','Cette liste est un point de départ, pas un diagnostic : aucun compte ou profil personnel n’a été recherché. Vérifiez toujours le domaine et la politique de confidentialité avant de transmettre vos données.');root.append(note);
+})();
